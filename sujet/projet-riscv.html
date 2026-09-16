@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- 2026-09-14 Lun 11:55 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAÉ S5.A.01</title>
+<meta name="author" content="Michaël Hauspie">
+<meta name="generator" content="Org Mode">
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'JavaScript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style type="text/css">
+body { font-family: Marianne, sans-serif; line-height: 1.5; font-size: 12pt; letter-spacing: .03rem; word-spacing: .1rem; text-align: justify;}
+code { background-color: #f0f0f0; padding: 1pt; border: 1px solid #e6e6e6; border-radius: 3px; }
+pre { word-spacing: 0 }
+blockquote { background-color: #e0e0f0; padding: 1em; border: 1px solid #e6e6e6; border-radius: 3px; }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script id="MathJax-script" async="" src="projet-riscv_fichiers/tex-mml-chtml.js">
+</script>
+<style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-msup {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-msub {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "2";
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: "3";
+}
+
+mjx-c.mjx-c34::before {
+  padding: 0.677em 0.5em 0 0;
+  content: "4";
+}
+
+mjx-c.mjx-c39::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "9";
+}
+
+mjx-c.mjx-c36::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "6";
+}
+
+mjx-c.mjx-c37::before {
+  padding: 0.676em 0.5em 0.022em 0;
+  content: "7";
+}
+
+mjx-c.mjx-c1D453.TEX-I::before {
+  padding: 0.705em 0.55em 0.205em 0;
+  content: "f";
+}
+
+mjx-c.mjx-c1D452.TEX-I::before {
+  padding: 0.442em 0.466em 0.011em 0;
+  content: "e";
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "1";
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "0";
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "5";
+}
+
+mjx-c.mjx-c1D45B.TEX-I::before {
+  padding: 0.442em 0.6em 0.011em 0;
+  content: "n";
+}
+
+mjx-c.mjx-c1D45C.TEX-I::before {
+  padding: 0.441em 0.485em 0.011em 0;
+  content: "o";
+}
+
+mjx-c.mjx-c1D45A.TEX-I::before {
+  padding: 0.442em 0.878em 0.011em 0;
+  content: "m";
+}
+
+mjx-c.mjx-c1D44F.TEX-I::before {
+  padding: 0.694em 0.429em 0.011em 0;
+  content: "b";
+}
+
+mjx-c.mjx-c1D45F.TEX-I::before {
+  padding: 0.442em 0.451em 0.011em 0;
+  content: "r";
+}
+
+mjx-c.mjx-c5B::before {
+  padding: 0.75em 0.278em 0.25em 0;
+  content: "[";
+}
+
+mjx-c.mjx-c1D456.TEX-I::before {
+  padding: 0.661em 0.345em 0.011em 0;
+  content: "i";
+}
+
+mjx-c.mjx-c5D::before {
+  padding: 0.75em 0.278em 0.25em 0;
+  content: "]";
+}
+
+mjx-c.mjx-c1D457.TEX-I::before {
+  padding: 0.661em 0.412em 0.204em 0;
+  content: "j";
+}
+
+mjx-c.mjx-c3A::before {
+  padding: 0.43em 0.278em 0 0;
+  content: ":";
+}
+
+mjx-c.mjx-c3C::before {
+  padding: 0.54em 0.778em 0.04em 0;
+  content: "<";
+}
+
+mjx-c.mjx-c1D45D.TEX-I::before {
+  padding: 0.442em 0.503em 0.194em 0;
+  content: "p";
+}
+
+mjx-c.mjx-c1D44E.TEX-I::before {
+  padding: 0.441em 0.529em 0.01em 0;
+  content: "a";
+}
+
+mjx-c.mjx-c1D461.TEX-I::before {
+  padding: 0.626em 0.361em 0.011em 0;
+  content: "t";
+}
+
+mjx-c.mjx-c3D::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "=";
+}
+
+mjx-c.mjx-c38::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "8";
+}
+
+mjx-c.mjx-c1D460.TEX-I::before {
+  padding: 0.442em 0.469em 0.01em 0;
+  content: "s";
+}
+
+mjx-c.mjx-c1D450.TEX-I::before {
+  padding: 0.442em 0.433em 0.011em 0;
+  content: "c";
+}
+
+mjx-c.mjx-c1D451.TEX-I::before {
+  padding: 0.694em 0.52em 0.01em 0;
+  content: "d";
+}
+
+mjx-c.mjx-c2E::before {
+  padding: 0.12em 0.278em 0 0;
+  content: ".";
+}
+</style></head>
+<body>
+<div id="content" class="content">
+<header>
+<h1 class="title">SAÉ S5.A.01</h1>
+<p class="subtitle" role="doc-subtitle">Émulateur processeur RISC-V</p>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf817642">Préambule</a></li>
+<li><a href="#org726a164">1. Introduction</a>
+<ul>
+<li><a href="#org248edb6">1.1. Description générale de la SAÉ</a>
+<ul>
+<li><a href="#org54e2e88">1.1.1. Objectifs</a></li>
+<li><a href="#org7612095">1.1.2. L’émulation</a></li>
+</ul>
+</li>
+<li><a href="#org4ee3755">1.2. Rappel d’architecture</a>
+<ul>
+<li><a href="#org2ea9b27">1.2.1. Registres</a></li>
+<li><a href="#org84be0b9">1.2.2. Unité Arithmétique et Logique (UAL)</a></li>
+<li><a href="#orgf9b0da0">1.2.3. Mémoire et espace d’adressage</a></li>
+<li><a href="#org5a3c170">1.2.4. Unité de contrôle</a></li>
+<li><a href="#orgd0edfed">1.2.5. Entrées/sorties</a></li>
+</ul>
+</li>
+<li><a href="#org4e16610">1.3. RISC-V</a></li>
+<li><a href="#orgf4cd1a4">1.4. Outils à votre disposition</a></li>
+</ul>
+</li>
+<li><a href="#orgf495518">2. Première étape: découverte du codage du jeu d’instructions</a>
+<ul>
+<li><a href="#orgcb47cc5">2.1. Programme <i>natif</i> et langage assembleur</a></li>
+<li><a href="#orgecbc04f">2.2. Codage des instructions</a>
+<ul>
+<li><a href="#org1a50617">2.2.1. Notations</a></li>
+<li><a href="#orge9e6524">2.2.2. Forme générale et <i>opcode</i></a></li>
+<li><a href="#org72ebcb2">2.2.3. Registres</a></li>
+<li><a href="#org116ffcf">2.2.4. Valeurs immédiates</a></li>
+</ul>
+</li>
+<li><a href="#org35ae9d9">2.3. Livrable 1: un premier décodeur</a></li>
+<li><a href="#org6ef2a87">2.4. Livrable 2 : un désassembleur complet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div id="outline-container-orgf817642" class="outline-2">
+<h2 id="orgf817642">Préambule</h2>
+<div class="outline-text-2" id="text-orgf817642">
+<p>
+Ce document présente le travail à réaliser dans le cadre de la SAÉ du semestre 5 du BUT
+Informatique, Parcours Réalisation d’applications : conception, développement, validation.
+</p>
+
+
+<p>
+De nombreux éléments sont soit directement extrait de la spécification RISC-V, distribuée sous
+licence Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, soit retranscrits et adaptés. Notamment, les figures
+représentant les différents codages (comme la Figure <a href="#org488c593">1</a>) sont celles de la spécification reprises
+à l’identique.
+</p>
+
+<p>
+Ce document est lui même placé sous licence Creative Commons <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA 4.0</a>
+</p>
+
+
+<figure id="org4380c55">
+<img src="projet-riscv_fichiers/by-nc-sa.svg" alt="by-nc-sa.svg" class="org-svg">
+
+</figure>
+</div>
+</div>
+<div id="outline-container-org726a164" class="outline-2">
+<h2 id="org726a164"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org248edb6" class="outline-3">
+<h3 id="org248edb6"><span class="section-number-3">1.1.</span> Description générale de la SAÉ</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org54e2e88" class="outline-4">
+<h4 id="org54e2e88"><span class="section-number-4">1.1.1.</span> Objectifs</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Dans le cadre de cette SAÉ, vous allez être confronté.e.s au développement d’un logiciel qui sort du
+périmètre dans lequel vous avez l’habitude d’évoluer dans les différentes ressources du
+BUT. L’objectif de la SAÉ est triple :
+</p>
+
+<ol class="org-ol">
+<li>apprendre un nouveau langage de programmation, voire un nouveau paradigme de programmation (ou au
+moins faire utiliser un autre langage que Java ou Javascript) ;</li>
+<li>(re)découvrir le fonctionnement d’un processeur ;</li>
+<li>écrire un programme respectant une spécification stricte.</li>
+</ol>
+
+<p>
+Pour répondre à ces objectifs, vous allez développer un logiciel permettant d’émuler un ordinateur
+basé sur un processeur <a href="https://riscv.org/">RISC-V</a>, en utilisant le langage de programmation de votre choix. La
+seule contrainte est que ce langage ne soit ni Java, ni Javascript. En raison des contraintes de
+performance liée au développement d’un émulateur, un langage qui se compile vers du code natif
+serait particulièrement indiqué. On peut par exemple citer <a href="https://www.open-std.org/jtc1/sc22/wg14/www/projects#9899">C</a>, <a href="https://isocpp.org/">C++</a>, <a href="https://www.rust-lang.org/">Rust</a> ou encore <a href="https://go.dev/">Go</a>.
+</p>
+
+<p>
+Vous êtes cependant libre d’en choisir un autre. Les exemples de code de ce document seront écrit en
+C et en Rust.
+</p>
+</div>
+</div>
+<div id="outline-container-org7612095" class="outline-4">
+<h4 id="org7612095"><span class="section-number-4">1.1.2.</span> L’émulation</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+L’émulation est le fait de simuler le fonctionnement d’une architecture matérielle à l’aide d’un
+programme informatique. Le programme est en charge de modéliser et de faire évoluer l’état «&nbsp;virtuel&nbsp;»
+de l’architecture matérielle.
+</p>
+
+<p>
+Le logiciel d’émulation (que nous nommerons «&nbsp;émulateur&nbsp;» à partir de maintenant) doit donc proposer
+une structure de données qui représente le matériel que l’on cherche à simuler et faire évoluer ces
+données au fur-et-à-mesure de l’avancée de la simulation. Pour en savoir plus sur la notion
+d’émulation, vous pouvez vous référer à la page Wikipedia qui y est <a href="https://en.wikipedia.org/wiki/Emulator">consacrée</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4ee3755" class="outline-3">
+<h3 id="org4ee3755"><span class="section-number-3">1.2.</span> Rappel d’architecture</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Afin de comprendre comment nous allons simuler (ou imiter) le fonctionnement d’un processeur, nous
+allons revenir sur l’architecture générale d’un ordinateur, l’architecture de <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">von Neumann</a>.
+</p>
+
+<p>
+Dans sa vision la plus simple, un ordinateur possède :
+</p>
+
+<ul class="org-ul">
+<li>une unité de calcul constituée de <i>registres</i> et d’une unité arithmétique et logique (UAL, <i>ALU</i>
+en anglais) ;</li>
+<li>une unité de contrôle constituée principalement d’un compteur de programme ;</li>
+<li>une mémoire qui contient <i>à la fois</i> les données manipulées <i>et</i> le programme à exécuter ;</li>
+<li>des périphériques d’entrée/sortie.</li>
+</ul>
+</div>
+<div id="outline-container-org2ea9b27" class="outline-4">
+<h4 id="org2ea9b27"><span class="section-number-4">1.2.1.</span> Registres</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Les registres sont les plus petites unités de stockage du processeur. Ils sont intégrés à celui-ci et
+n’ont pas d’adresse (car il ne sont pas en mémoire). Il sont directement utilisables dans les
+instructions machine et servent de stockage de traitement. L’unité arithmétique et logique travaille
+exclusivement avec eux sur la plupart des architectures. Quelques exemples sur des architectures
+connues :
+</p>
+
+<ul class="org-ul">
+<li>Intel: <code>rax</code>, <code>rbx</code>, <code>rsi</code>, <code>rdi</code>…</li>
+<li>ARM: <code>r0</code>, <code>r1</code>, <code>r2</code>…</li>
+<li>RISC-V: <code>x0</code>, <code>x1</code>, <code>x2</code>…</li>
+</ul>
+
+<p>
+Les registres s’utilisent directement dans le langage assembleur lié à l’architecture. Par exemple,
+l’instruction RISC-V du programme <a href="#org8e8424d">1</a> réalise l’opération <i>ajouter 10 au contenu du
+registre x5 et stocker le résultat dans le registre x4</i>.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;1&nbsp;: </span>Exemple d’instruction RISC-V.</label><pre class="src src-asm" id="org8e8424d"><code>        <span style="color: #969896;">; </span><span style="color: #969896;">x4 = x5 + 10
+</span>        <span style="color: #b9ca4a;">addi</span> x4, x5, 10
+</code></pre>
+</div>
+
+
+<p>
+Sur certaines architectures, ces registres peuvent avoir des <i>alias</i> (c’est à dire plusieurs noms
+différents). C’est particulièrement le cas sur RISC-V ou <code>x0</code> se nomme également <code>zero</code>, <code>x1</code> se
+nomme également <code>ra</code>… Nous y reviendrons dans la description de l’architecture RISC-V.
+</p>
+
+<p>
+Lorsque l’on parle de données manipulées par un processeur, on utilise fréquemment la notion de
+<i>mot</i>. Un <i>mot</i> correspond à une unité de donnée <i>naturelle</i> pour le processeur. Il s’agit
+généralement de la taille de ses registres.
+</p>
+
+<p>
+On parlera alors d’un <i>mot</i> de 4 octets sur un processeur 32 bits, de 8 octets sur un processeur 64
+bits. De même, on pourra parler de <i>demi-mot</i> pour désigner une valeur de taille 2 octets sur un
+processeur 32 bits. Nous retrouverons cette notion quand nous décrirons le jeu d’instructions
+RISC-V.
+</p>
+</div>
+</div>
+<div id="outline-container-org84be0b9" class="outline-4">
+<h4 id="org84be0b9"><span class="section-number-4">1.2.2.</span> Unité Arithmétique et Logique (UAL)</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+L’UAL est la partie du processeur qui exécute les intructions. Elle réalise des calculs (additions,
+soustractions…), des accès mémoires (lecture, écriture en mémoire) ou du contrôle de flot
+d’exécution (tests et branchements permettant de réaliser des structures <i>si, sinon</i>, des
+boucles…). Elle travaille sur les registres.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9b0da0" class="outline-4">
+<h4 id="orgf9b0da0"><span class="section-number-4">1.2.3.</span> Mémoire et espace d’adressage</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+La mémoire de travail permet de stocker le programme et les données. Elle est reliée à l’unité
+arithmétique et logique par un <i>bus d’adresse</i> et un <i>bus de données</i>. Le bus d’adresse permet au
+processeur d’indiquer à la mémoire à quelles données il veut accéder (à l’aide d’une <i>adresse</i>). Il
+récupère (pour une lecture) ou fournit (pour une écriture) les données par le bus de données.
+</p>
+
+<p>
+On appelle <i>espace d’adressage</i> l’ensemble des adresses auquel le processeur peut accéder. Cet
+espace d’adressage n’est pas forcement égal à la taille de la mémoire disponible sur le système. Par
+exemple, un processeur ayant des adresses 32 bits a un espace d’adressage de taille <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="0"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mrow data-mjx-texclass="ORD"><mn>32</mn></mrow></msup></math></mjx-assistive-mml></mjx-container> octets
+(soit <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="1"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mn class="mjx-n"><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c36"></mjx-c><mjx-c class="mjx-c37"></mjx-c></mjx-mn><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c39"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn><mn>294</mn><mn>967</mn><mn>296</mn></math></mjx-assistive-mml></mjx-container> octets, soit encore 4 Giga octets). Un processeur avec un bus de 64 bits a un
+espace d’adressage de <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="2"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c36"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mrow data-mjx-texclass="ORD"><mn>64</mn></mrow></msup></math></mjx-assistive-mml></mjx-container> octets soit… beaucoup trop pour fabriquer une mémoire qui possède
+autant d’octets.
+</p>
+
+<p>
+Un système n’a également pas forcement qu’une mémoire. Par exemple, les micro-contrôleurs – petits
+ordinateurs intégrés qui équipent nos petits objets (objets connectés, réfrigérateurs, carte
+bancaire…) – possèdent généralement deux mémoires :
+</p>
+
+<ul class="org-ul">
+<li>une mémoire <i>volatile</i>, la RAM, dont le contenu est effacé quand on coupe l’alimentation ;</li>
+<li>une mémoire <i>persistante</i>, la ROM, dont le contenu persiste même après un arrêt de l’alimentation
+électrique. De nombres technologies existent pour ce type de mémoire avec des possibilités
+variables (lecture seule complète, ré-inscriptible…) ;</li>
+</ul>
+
+<p>
+Ces deux types de mémoire cohabitent dans le même espace d’adressage. On pourrait par exemple
+imaginer une architecture dans laquelle :
+</p>
+
+<ul class="org-ul">
+<li>les adresses de <code>0x00000000</code> à <code>0x00080000</code> permettent d’accéder aux 512 KB d’une mémoire RAM ;</li>
+<li>les adresses de <code>0x20000000</code> à <code>0x20a00000</code> permettent d’accéder aux 10 MB d’une mémoire ROM.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a3c170" class="outline-4">
+<h4 id="org5a3c170"><span class="section-number-4">1.2.4.</span> Unité de contrôle</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+C’est elle qui régit le fonctionnement du processeur. Son composant le plus important est le
+compteur de programme. Il s’agit d’un registre particulier qui contient l’adresse de l’instruction à
+exécuter. Sur RISC-V, ce registre se nomme <code>pc</code>. L’algorithme exécuté par l’unité de contrôle (et
+donc par le processeur) est le suivant :
+</p>
+
+<ol class="org-ol">
+<li>lire en mémoire l’instruction située à l’adresse contenue dans le registre <code>pc</code> ;</li>
+<li>décoder cette instruction</li>
+<li>l’exécuter et mettre à jour <code>pc</code> pour pointer sur l’instruction suivante à exécuter ;</li>
+<li>retour en 1</li>
+</ol>
+
+<p>
+La mise à jour de <code>pc</code> (étape 3) dépend du type d’instruction :
+</p>
+
+<ol class="org-ol">
+<li>pour une instruction <i>normale</i> on ajoute à <code>pc</code> la taille de l’instruction courante</li>
+<li>pour une instruction de branchement sans condition, on modifie <code>pc</code> en lui affectant l’adresse
+indiquée dans l’instruction de branchement ;</li>
+<li>pour une instruction de branchement avec condition, on évalue la condition. Si elle est vraie, on
+effectue l’opération 2., si elle est fausse, l’opération 1.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd0edfed" class="outline-4">
+<h4 id="orgd0edfed"><span class="section-number-4">1.2.5.</span> Entrées/sorties</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+Les périphériques d’entrées/sorties permettent au processeur d’interagir avec le monde extérieur. Il
+peut s’agir d’un clavier, d’un écran, d’un simple <a href="https://fr.wikipedia.org/wiki/RS-232">port série</a>, d’une carte son, d’une carte
+graphique…
+</p>
+
+<p>
+Selon l’architecture, ces périphériques sont accessibles via des instructions particulières (<code>in</code> et
+<code>out</code> sur Intel par exemple<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>) ou rendus visibles dans l’espace d’adressage, comme sur ARM. Il
+suffit alors d’écrire ou lire à une adresse spécifique pour faire réaliser des opérations à un
+périphérique.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e16610" class="outline-3">
+<h3 id="org4e16610"><span class="section-number-3">1.3.</span> RISC-V</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+RISC-V<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup> n’est en réalité pas directement un processeur. Il s’agit d’un
+standard ouvert de jeu d’instructions (ou <i>ISA, Instruction-Set Architecture</i>). C’est donc avant
+tout un document décrivant une architecture et un jeu d’instructions. Libre ensuite à chacun de
+l’implémenter, c’est à dire de concevoir un processeur qui respecte sa spécification et son
+jeu d’instructions.
+</p>
+
+<p>
+D’abord conçu par l’université de Berkeley comme un support à la recherche et à l’éducation, RISC-V
+est devenu un standard utilisé par l’industrie. De nombreuses implémentations voient le jour,
+qu’elles soient libres ou propriétaires. L’intérêt de concevoir un processeur respectant le standard
+est de pouvoir utiliser l’ensemble des suites logicielles permettant de développer pour ce
+processeur (notamment assembleurs et compilateurs).
+</p>
+
+
+<p>
+La spécification RISC-V est organisée en plusieurs jeux d’instructions de base auxquels peuvent
+s’ajouter des extensions. Les jeux de bases définissent l’architecture minimale ne travaillant
+qu’avec des nombres entiers et se déclinent en plusieurs versions :
+</p>
+
+<ul class="org-ul">
+<li>RV32I : jeu d’instructions pour architecture 32 bits ;</li>
+<li>RV64I : jeu d’instructions pour architecture 64 bits ;</li>
+<li>RV128I : jeu d’instructions pour architecture 128 bits ;</li>
+<li>RV32E et RV64E : jeux d’instructions dédiés aux systèmes embarqués.</li>
+</ul>
+
+<p>
+Pour ce projet, vous allez émuler le jeu d’instructions RV32I, le plus simple de la
+spécification. Il est basé sur une architecture 32 bits et de 42 instructions permettant de
+manipuler des nombres entiers.
+</p>
+
+<p>
+Le jeu d’instruction indique les <i>opérations</i> que peut réaliser une unité de traitement RISC-V. Le
+concepteur d’une architecture basée sur RISC-V peut décider de nombreuses choses non imposées par la
+spécification :
+</p>
+
+<ul class="org-ul">
+<li>nombre d’unités de traitement disponibles (mono-coeur ou multi-coeur…) ;</li>
+<li>organisation de la mémoire ;</li>
+<li>périphériques disponibles et mode d’interaction ;</li>
+<li>…</li>
+</ul>
+
+<p>
+Dans ce projet, vous êtes le/la conceptrice de l’architecture. Nous allons faire les choix
+suivants<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>&nbsp;:
+</p>
+
+<ul class="org-ul">
+<li>l’architecture contiendra une seule unité de traitement RISC-V fournissant le jeu d’instruction
+RV32I non privilégié (32 bits, manipulation de nombres entiers, un seul mode de privilège
+d’exécution) ;</li>
+<li>elle disposera de 512 KB de mémoire RAM, accessibles de façon contiguë entre les adresses
+<code>0x00000000</code> et <code>0x00080000</code> ;</li>
+<li>au démarrage, l’unité de traitement se met à exécuter le programme à l’adresse 0x100.</li>
+</ul>
+
+<p>
+Nous ajouterons d’autres contraintes/fonctionnalités plus loin dans le projet.
+</p>
+
+<blockquote>
+<p>
+Pour toute la durée du projet, en plus de ce sujet, la spécification du jeu d’instruction RISC-V
+sera votre document de référence. Elle est disponible à l’adresse <a href="https://docs.riscv.org/reference/home/index.html">https://docs.riscv.org/reference/home/index.html</a>.
+</p>
+
+<p>
+La version qui nous intéresse est la version <i>Unprivileged ISA</i>. Elle contient
+la spécification <i>non privilégiée</i> des jeux d’instructions de base (RV32I,
+RV64I…) ainsi que des extensions non privilégiées. Lorsque le présent document
+fera référence à cette spécification, il indiquera la section concernée. Par
+exemple, le jeu d’instructions RV32I est défini dans le chapitre 1.
+</p>
+
+<p>
+Bien que cela puisse être instructif, vous n’avez pas besoin de lire cette spécification en
+entier. Le sujet donnera toujours un résumé des informations indispensables et le numéro de section
+associée. Vous pourrez aller voir la spécification officielle pour avoir plus de précisions.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orgf4cd1a4" class="outline-3">
+<h3 id="orgf4cd1a4"><span class="section-number-3">1.4.</span> Outils à votre disposition</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Pour vous aider tout au long de cette SAE, vous pouvez utiliser
+</p>
+
+<ul class="org-ul">
+<li><p>
+<a href="https://gitlab.univ-lille.fr/michael.hauspie/riscv-samples">quelques programmes d’exemple</a>, en assembleur et en C, avec les outils pour compiler vers un
+fichier binaire contenant des instructions RISCV. Pour les compiler, vous devez avoir installé la
+suite de compilation RISCV.
+</p>
+<ul class="org-ul">
+<li>sous Debian ou Ubuntu: <code>apt-get install gcc-riscv64-unknown-elf</code></li>
+<li>sous MacOS: <code>brew install riscv64-elf-gcc</code></li>
+</ul>
+<p>
+Pour la plupart de ces exemples, il suffit de lancer la commande <code>make</code> dans le répertoire
+contenant les sources et un ou plusieurs fichiers ayant pour extension <code>.bin</code> seront créé suite
+aux opération de compilation et s’assemblage. Ce sont ces fichiers <code>.bin</code> qui devrons être chargés
+par votre émulateur.
+</p></li>
+<li><a href="https://github.com/TheThirdOne/rars">https://github.com/TheThirdOne/rars</a> : un IDE pour assembleur RISCV, écrit en Java. Pratique pour
+tester et assembler les instructions une à une</li>
+<li><a href="https://github.com/kvakil/venus/">https://github.com/kvakil/venus/</a> : Un émulateur en ligne, autre solution pour tester
+et assembler des instructions une à une</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf495518" class="outline-2">
+<h2 id="orgf495518"><span class="section-number-2">2.</span> Première étape: découverte du codage du jeu d’instructions</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Le premier attendu de ce projet vous permettra de vous familiariser avec le décodage des
+instructions. Pour cela, vous allez écrire un programme qui prend en entrée un fichier contenant
+des instructions RISC-V au format <b>binaire</b> et qui produira en sortie du <b>texte</b>, représentant
+ces instructions en utilisant leur représentation textuelle en langage assembleur.
+</p>
+</div>
+<div id="outline-container-orgcb47cc5" class="outline-3">
+<h3 id="orgcb47cc5"><span class="section-number-3">2.1.</span> Programme <i>natif</i> et langage assembleur</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Une unité de traitement RISC-V exécute un programme stocké en mémoire en format <b>binaire</b> (par
+opposition à texte). Dans le jeu d’instructions qui nous intéresse (RV32I), toutes les instructions
+sont codées sur 32 bits. Ce programme est dit <i>natif</i> au sens où il est constitué de suites d’octets
+directement exécutables par l’unité de traitement, sans aucune transformation logicielle.
+</p>
+
+<p>
+Un programme est donc une succession de mots de 4 octets, chacun de ces mots représentant une
+instruction. Par exemple, en RV32I, le mot ayant pour valeur <code>0x00a10093</code> peut s’écrire sous la
+forme texture du programme <a href="#orgdf0e0d2">2</a>.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;2&nbsp;: </span>Forme textuelle du mot <code>0x00a10093</code>.</label><pre class="src src-asm" id="orgdf0e0d2"><code>        <span style="color: #969896;">; </span><span style="color: #969896;">Réalise l'opération: x1 = x2 + 10
+</span>        <span style="color: #b9ca4a;">addi</span> x1, x2, 10
+</code></pre>
+</div>
+
+<p>
+Cette forme textuelle n’est qu’un code source, elle ne peut pas être exécutée directement par le
+processeur. Pour cela, il faut <i>l’assembler</i>, c’est à dire transformer le texte <code>addi x1, x2, 10</code> en
+un mot de 4 octets valant <code>0x00a10093</code>.
+</p>
+
+<p>
+À la différence des langages que vous manipulez habituellement (comme le Java ou le C), cette
+traduction est simple est directe, il ne s’agit pas d’une réelle compilation, juste d’un changement
+de représentation d’une forme compréhensible par un humain à une forme compréhensible par un
+processeur. Il s’agit par contre bien de la même information: l’instruction qui ajoute 10 à la
+valeur contenue dans le registre x2 et range le résultat dans le registre x1.
+</p>
+</div>
+</div>
+<div id="outline-container-orgecbc04f" class="outline-3">
+<h3 id="orgecbc04f"><span class="section-number-3">2.2.</span> Codage des instructions</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Nous allons maintenant détailler la façon dont les instructions sont <i>codées</i> dans le jeu
+d’instructions RV32I. Il nous faut d’abord introduire quelques notations.
+</p>
+</div>
+<div id="outline-container-org1a50617" class="outline-4">
+<h4 id="org1a50617"><span class="section-number-4">2.2.1.</span> Notations</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Pour toute la suite du document, on considère que, pour un mot de 32 bits, le bit 0 est le bit de
+poids faible et le bit 31 est le bit de poids fort. Dans toutes les représentations graphiques de
+codage de nombres, le bit 0 (donc de poids faible) sera sur la <b>droite</b> de la représentation.
+</p>
+
+<p>
+Les nombres seront représentés en indiquant leur <i>base</i> quand celà sera nécessaire. Si la base n’est
+pas indiquée, il s’agira nécessairement d’une représentation en base 10.
+</p>
+
+<p>
+La base sera indiquée soit par sa valeur en indice à droite du nombre, soit en écrivant le nombre
+dans une représentation usuelle de langage de programmation (<i>i.e.</i> utilisant <code>0x</code> ou <code>0b</code> pour la
+base 16 ou la base 2 respectivement) soit explicitement dans le texte. Ainsi les valeurs suivantes
+représentent le même nombre :
+</p>
+
+<ul class="org-ul">
+<li><code>0xfe</code> ;</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="3"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><msub><mi>e</mi><mrow data-mjx-texclass="ORD"><mn>16</mn></mrow></msub></math></mjx-assistive-mml></mjx-container> ;</li>
+<li><code>0b11111110</code> ;</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="4"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mn>11111110</mn><mn>2</mn></msub></math></mjx-assistive-mml></mjx-container> ;</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="5"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mn>254</mn><mrow data-mjx-texclass="ORD"><mn>10</mn></mrow></msub></math></mjx-assistive-mml></mjx-container> ;</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="6"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>254</mn></math></mjx-assistive-mml></mjx-container>.</li>
+</ul>
+
+<p>
+Lorsque l’on fera référence à une sous partie d’un nombre, on l’écrira :
+</p>
+
+<ul class="org-ul">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="7"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> pour le <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="8"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math></mjx-assistive-mml></mjx-container><sup>ième</sup> bit de ce nombre ;</li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="9"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mi>j</mi><mo>:</mo><mi>i</mi><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> pour le nombre représenté par les bits <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="10"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi></math></mjx-assistive-mml></mjx-container> à <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="11"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>j</mi></math></mjx-assistive-mml></mjx-container> avec <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="12"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D457 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mo>&lt;</mo><mi>j</mi></math></mjx-assistive-mml></mjx-container> ;</li>
+</ul>
+
+<p>
+Si on écrit <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="13"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi><mo>=</mo><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mn>12</mn><mo>:</mo><mn>10</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>, cela signifie que la valeur <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="14"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi></math></mjx-assistive-mml></mjx-container> est représentée par les 3
+bits 10, 11 et 12 de <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="15"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi></math></mjx-assistive-mml></mjx-container>.
+</p>
+
+<p>
+On pourra ensuite étendre la notation en indiquant, par exemple, <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="16"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi><mo stretchy="false">[</mo><mn>2</mn><mo>:</mo><mn>1</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> pour signifier la
+valeur représentée par les bits 1 et 2 de <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="17"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi></math></mjx-assistive-mml></mjx-container>. Dans cet exemple, on a <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="18"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi><mo stretchy="false">[</mo><mn>2</mn><mo>:</mo><mn>1</mn><mo stretchy="false">]</mo><mo>=</mo><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mn>12</mn><mo>:</mo><mn>11</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>.
+</p>
+
+<p>
+Pour clarifier, considérons la valeur 32 bits <code>0xcafe4872</code>. Cette valeur se représente
+en base deux sous la forme :
+</p>
+
+<pre class="example">1100 1010 1111 1110 0100 1000 0111 0010
+ C    A    F    E    4    8    7    2
+</pre>
+
+<p>
+À partir de cette valeur, voici quelques exemples d’utilisation de la notation introduite précédemment:
+</p>
+
+<ul class="org-ul">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="19"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mn>3</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><msub><mn>0010</mn><mn>2</mn></msub><mo>=</mo><msub><mn>2</mn><mrow data-mjx-texclass="ORD"><mn>10</mn></mrow></msub></math></mjx-assistive-mml></mjx-container></li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="20"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c><mjx-c class="mjx-c37"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mn>11</mn><mo>:</mo><mn>4</mn><mo stretchy="false">]</mo><mo>=</mo><msub><mn>10000111</mn><mn>2</mn></msub><mo>=</mo><msub><mn>87</mn><mrow data-mjx-texclass="ORD"><mn>16</mn></mrow></msub><mo>=</mo><msub><mn>135</mn><mrow data-mjx-texclass="ORD"><mn>10</mn></mrow></msub></math></mjx-assistive-mml></mjx-container></li>
+<li>Si <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="21"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi><mo>=</mo><mi>n</mi><mi>o</mi><mi>m</mi><mi>b</mi><mi>r</mi><mi>e</mi><mo stretchy="false">[</mo><mn>11</mn><mo>:</mo><mn>4</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> alors <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="22"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c37"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c38"></mjx-c></mjx-mn><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>e</mi><mo stretchy="false">[</mo><mn>7</mn><mo>:</mo><mn>4</mn><mo stretchy="false">]</mo><mo>=</mo><msub><mn>1000</mn><mn>2</mn></msub><mo>=</mo><msub><mn>8</mn><mrow data-mjx-texclass="ORD"><mn>10</mn></mrow></msub></math></mjx-assistive-mml></mjx-container></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge9e6524" class="outline-4">
+<h4 id="orge9e6524"><span class="section-number-4">2.2.2.</span> Forme générale et <i>opcode</i></h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Sauf exception<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>, toutes les instructions sont codées sur 4 octets selon les 4 formes, ou type
+d’encodage, illustrées par les figures <a href="#org488c593">1</a>, <a href="#orgc721b68">2</a>, <a href="#orgfe082ec">3</a> et <a href="#orgd000961">4</a> (<i>c.f.</i> section 1.1.2 de la
+spécification):
+</p>
+
+
+<figure id="org488c593">
+<img src="projet-riscv_fichiers/r-type.svg" alt="r-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;1&nbsp;: </span>Codage de type R</figcaption>
+</figure>
+
+<figure id="orgc721b68">
+<img src="projet-riscv_fichiers/i-type.svg" alt="i-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;2&nbsp;: </span>Codage de type I</figcaption>
+</figure>
+
+<figure id="orgfe082ec">
+<img src="projet-riscv_fichiers/s-type.svg" alt="s-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;3&nbsp;: </span>Codage de type S</figcaption>
+</figure>
+
+<figure id="orgd000961">
+<img src="projet-riscv_fichiers/u-type.svg" alt="u-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;4&nbsp;: </span>Codage de type U</figcaption>
+</figure>
+
+<p>
+Dans ces figures, le mot 32 bits complet sera nommé <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="23"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi></math></mjx-assistive-mml></mjx-container> et les nombres indiqués au dessus sont
+les numéro de bits. On peut également voir indiqués les noms de champs que l’on utilisera par la
+suite. Par exemple, dans le type R, on peut déduire de la figure correspondante que :
+</p>
+
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="24"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>r</mi><mi>s</mi><mn>2</mn><mo>=</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo stretchy="false">[</mo><mn>24</mn><mo>:</mo><mn>20</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+Si le nom de champ est suivi de numéro de bit, comme dans <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="25"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>11</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> du type I, cela signifie que
+l’on parle des bits 0 à 11 du champ <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="26"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi></math></mjx-assistive-mml></mjx-container>.
+</p>
+
+<p>
+Ce qui nous intéresse dans un premier temps est le champ <code>opcode</code>, qui est une valeur sur 7 bits,
+représentée par les bits 0 à 6 du mot de 32 bits représentant l’instruction.
+</p>
+
+<p>
+Selon la notation que nous avons introduite précédemment, on note
+</p>
+
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="27"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c36"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>o</mi><mi>p</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>=</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo stretchy="false">[</mo><mn>6</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+Cet <i>opcode</i> va nous permettre de distinguer les différents <i>types</i> d’instruction. Chaque type
+d’instruction utilisera l’un des 4 type de codage (R, I, S ou U). Les types d’instruction (et donc
+les valeurs d’opcode) que nous allons implémenter (ceux du jeu d’instruction RV32I donc) sont les
+suivants:
+</p>
+
+<ul class="org-ul">
+<li><code>OP-IMM</code>, <code>AUIPC</code> et <code>LUI</code> : opération registre/valeur immédiate (section 1.1.4.1)</li>
+<li><code>OP</code> : opération registre/registre (section 1.1.4.2)</li>
+<li><code>JAL</code> et <code>JALR</code> : branchement inconditionnel (section 1.1.5.1)</li>
+<li><code>BRANCH</code> : branchement (section 1.1.5.2)</li>
+<li><code>LOAD</code> et <code>STORE</code> : lecture/écriture mémoire (section 1.1.6)</li>
+<li><code>MISC-MEM</code> : action mémoire spéciale (section 1.1.7)</li>
+<li><code>SYSTEM</code> : mécanisme d’exceptions (section 1.1.8)</li>
+</ul>
+
+<p>
+Le tableau <a href="#org246e478">1</a> indique, pour chaque type d’instruction, la valeur correspondante pour <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="28"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>o</mi><mi>p</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi></math></mjx-assistive-mml></mjx-container>
+ainsi que le type de codage employé.
+</p>
+
+<table id="org246e478">
+<caption class="t-above"><span class="table-number">Tableau 1:</span> Type d’instruction et encodage</caption>
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type d’instruction</th>
+<th scope="col" class="org-right"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="29"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>o</mi><mi>p</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi></math></mjx-assistive-mml></mjx-container></th>
+<th scope="col" class="org-right">Type d’encodage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>BRANCH</code></td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>JALR</code></td>
+<td class="org-right">1100111<sub>2</sub></td>
+<td class="org-right">I</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>LOAD</code></td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>MISC-MEM</code></td>
+<td class="org-right">0001111<sub>2</sub></td>
+<td class="org-right">I</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>OP-IMM</code></td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SYSTEM</code></td>
+<td class="org-right">1110011<sub>2</sub></td>
+<td class="org-right">I</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>JAL</code></td>
+<td class="org-right">1101111<sub>2</sub></td>
+<td class="org-right">U<sub>J</sub></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>OP</code></td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>STORE</code></td>
+<td class="org-right">0100011<sub>2</sub></td>
+<td class="org-right">S</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>AUIPC</code></td>
+<td class="org-right">0010111<sub>2</sub></td>
+<td class="org-right">U</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>LUI</code></td>
+<td class="org-right">0110111<sub>2</sub></td>
+<td class="org-right">U</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Vous pouvez remarquer que le tableau mentionne 2 types d’encodages supplémentaires, le type U<sub>J</sub> et le
+type S<sub>B</sub>. Il s’agit en réalité respectivement du type U et du type S pour lesquels le champ <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="30"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi></math></mjx-assistive-mml></mjx-container>
+s’interprète différemment (voir section 1.1.3). Nous reviendrons dessus le moment venu.
+</p>
+</div>
+</div>
+<div id="outline-container-org72ebcb2" class="outline-4">
+<h4 id="org72ebcb2"><span class="section-number-4">2.2.3.</span> Registres</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+Dans le codage des instructions, on peut voir les champs <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="31"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>1</mn></math></mjx-assistive-mml></mjx-container>, <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="32"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>2</mn></math></mjx-assistive-mml></mjx-container> et <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="33"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>d</mi></math></mjx-assistive-mml></mjx-container>. Ces champs désignent
+des numéros de registres. En observant plus en détail, on voit que ces champs sont <b>toujours</b> codés
+sur 5 bits. On peut donc représenter des valeurs de 0 à 31. La section 1.1.1 de la spécification nous
+apprends qu’un processeur RISC-V supportant le jeu d’instruction RV32I possède 32 registres généraux
+nommés <code>x0</code>, <code>x1</code>, …, <code>x31</code>. On peut facilement déduire que le nombre codé dans les instructions
+correspond à un numéro de registre. Ainsi, si le champ <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="34"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>1</mn></math></mjx-assistive-mml></mjx-container>, <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="35"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>2</mn></math></mjx-assistive-mml></mjx-container> ou <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="36"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>d</mi></math></mjx-assistive-mml></mjx-container> vaut 3, cela signifie
+que l’instruction utilise le registre <code>x3</code> pour le champ correspondant.
+</p>
+
+<p>
+Considérons l’instruction du programme <a href="#org00032fe">3</a> qui réalise l’opération <code>x3 = x5 + x8</code>.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;3&nbsp;: </span>Addition de registres</label><pre class="src src-asm" id="org00032fe"><code>        <span style="color: #969896;">; </span><span style="color: #969896;">syntaxe: add rd, rs1, rs2
+</span>        <span style="color: #b9ca4a;">add</span> x3, x5, x8
+</code></pre>
+</div>
+
+<p>
+On aura :
+</p>
+
+<ul class="org-ul">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="37"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>d</mi><mo>=</mo><mn>3</mn></math></mjx-assistive-mml></mjx-container></li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="38"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c35"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>1</mn><mo>=</mo><mn>5</mn></math></mjx-assistive-mml></mjx-container></li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="39"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c38"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi><mi>s</mi><mn>2</mn><mo>=</mo><mn>8</mn></math></mjx-assistive-mml></mjx-container></li>
+</ul>
+</div>
+<div id="outline-container-orgacebfca" class="outline-5">
+<h5 id="orgacebfca">Alias des registres</h5>
+<div class="outline-text-5" id="text-orgacebfca">
+<p>
+Dans le langage assembleur RISC-V, les registres peuvent être nommés
+<code>x0,x1,...x31</code>, mais on peut également utiliser des synonymes en lien avec
+l’utilisation usuelle qui est faite des ces derniers. La table <a href="#org18a2454">2</a>
+donne la liste de ces alias.
+</p>
+
+<table id="org18a2454">
+<caption class="t-above"><span class="table-number">Tableau 2:</span> Alias des registres RISC-V</caption>
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+
+<col class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Nom</th>
+<th scope="col" class="org-left">Alias</th>
+<th scope="col" class="org-left">Rôle usuel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>x0</code></td>
+<td class="org-left"><code>zero</code></td>
+<td class="org-left">Registre qui vaut toujours zéro</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x1</code></td>
+<td class="org-left"><code>ra</code></td>
+<td class="org-left">Adresse de retour</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x2</code></td>
+<td class="org-left"><code>sp</code></td>
+<td class="org-left">Pointeur de pile</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x3</code></td>
+<td class="org-left"><code>gp</code></td>
+<td class="org-left"><i>Global Pointer</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x4</code></td>
+<td class="org-left"><code>tp</code></td>
+<td class="org-left"><i>Thread Pointer</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x5 - x7</code></td>
+<td class="org-left"><code>t0 - t2</code></td>
+<td class="org-left">Registres temporaires</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x8 - x9</code></td>
+<td class="org-left"><code>s0 - s1</code></td>
+<td class="org-left"><i>Callee-saved</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x10 - x17</code></td>
+<td class="org-left"><code>a0 - a7</code></td>
+<td class="org-left">Arguments</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x18 - x27</code></td>
+<td class="org-left"><code>s2 - s11</code></td>
+<td class="org-left"><i>Callee-saved</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>x28 - x31</code></td>
+<td class="org-left"><code>t3 - t6</code></td>
+<td class="org-left">Registres temporaires</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+Ainsi, les deux instructions assembleur du programme <a href="#orgff70d63">4</a> sont
+équivalentes et seront codées par la même valeur 32 bits.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;4&nbsp;: </span>Instructions avec sans alias</label><pre class="src src-asm" id="orgff70d63"><code>        <span style="color: #969896;">; </span><span style="color: #969896;">Sans alias
+</span>        <span style="color: #b9ca4a;">add</span> x1, x12, x18
+        <span style="color: #969896;">; </span><span style="color: #969896;">Avec alias
+</span>        <span style="color: #b9ca4a;">add</span> ra, a2, s2
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org116ffcf" class="outline-4">
+<h4 id="org116ffcf"><span class="section-number-4">2.2.4.</span> Valeurs immédiates</h4>
+<div class="outline-text-4" id="text-2-2-4">
+</div>
+<div id="outline-container-orgd140bbd" class="outline-5">
+<h5 id="orgd140bbd">Principe général</h5>
+<div class="outline-text-5" id="text-orgd140bbd">
+<p>
+On appelle les constantes des <i>valeurs immédiates</i> qui apparaissent comme opérande d’une
+instruction. Dans le programme <a href="#orgb3a6c8a">5</a>, le nombre <b>58</b> est une valeur immédiate.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;5&nbsp;: </span>Exemple de valeur immédiate.</label><pre class="src src-asm" id="orgb3a6c8a"><code>        <span style="color: #969896;">; </span><span style="color: #969896;">syntaxe: addi rd, rs1, imm
+</span>        <span style="color: #b9ca4a;">addi</span> x3, x4, 58
+</code></pre>
+</div>
+
+
+<p>
+Dans le codage que l’on considère, si une instruction utilise une valeur immédiate, elle est
+indiquée par le champ <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="40"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi></math></mjx-assistive-mml></mjx-container>. Dans le codage de type I, la valeur immédiate est codée sur 12 bits et
+on a :
+</p>
+
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="41"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>11</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo stretchy="false">[</mo><mn>31</mn><mo>:</mo><mn>20</mn><mo stretchy="false">]</mo><mo>.</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+L’exemple en C donné par le programme <a href="#orge7673ef">6</a> montre comment extraire la valeur immédiate d’une
+instruction de type I.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;6&nbsp;: </span>Extraction d’une valeur immédiate depuis un codage de type I.</label><pre class="src src-C" id="orge7673ef"><code><span style="color: #7aa6da;">int</span> <span style="color: #e78c45;">immediate_dans_I</span>(<span style="color: #7aa6da;">uint32_t</span> <span style="color: #e7c547;">inst</span>) {
+    <span style="color: #969896;">// </span><span style="color: #969896;">0xfff = 0b1111 1111 1111, 12 bits à 1
+</span>    <span style="color: #7aa6da;">int</span> <span style="color: #e7c547;">imm_11_0</span> = (inst &gt;&gt; 20) &amp; 0xfff;
+
+    <span style="color: #b9ca4a;">return</span> imm_11_0;
+}
+</code></pre>
+</div>
+
+<p>
+Dans le codage de type S, c’est un peu plus compliqué et la valeur immédiate est toujours codée sur
+12 bits, mais elle est scindée en deux parties. On a alors :
+</p>
+
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="42"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c><mjx-c class="mjx-c35"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>11</mn><mo>:</mo><mn>5</mn><mo stretchy="false">]</mo><mo>=</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo stretchy="false">[</mo><mn>31</mn><mo>:</mo><mn>25</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" display="true" tabindex="0" ctxtmenu_counter="43"><mjx-math display="true" style="margin-left: 0px; margin-right: 0px;" class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c37"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2E"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>4</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo stretchy="false">[</mo><mn>7</mn><mo>:</mo><mn>11</mn><mo stretchy="false">]</mo><mo>.</mo></math></mjx-assistive-mml></mjx-container>
+</p>
+
+<p>
+Il faut donc <i>combiner</i> ces deux parties pour former les 12 bits de la valeur immédiate. Le programme 
+<a href="#org93a528d">7</a> vous montre comment extraire les 12 bits de la valeur immédiate dans un codage de type S.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;7&nbsp;: </span>Extraction d’une valeur immédiate depuis un codage de type S.</label><pre class="src src-C" id="org93a528d"><code><span style="color: #7aa6da;">int</span> <span style="color: #e78c45;">immediate_dans_S</span>(<span style="color: #7aa6da;">uint32_t</span> <span style="color: #e7c547;">inst</span>) {
+    <span style="color: #969896;">// </span><span style="color: #969896;">0x7f = 0b111 1111, 7 bits à 1
+</span>    <span style="color: #7aa6da;">int</span> <span style="color: #e7c547;">imm_11_5</span> = (inst &gt;&gt; 25) &amp; 0x7f;
+    <span style="color: #969896;">// </span><span style="color: #969896;">0x1f = 0b1 1111, 5 bits à 1
+</span>    <span style="color: #7aa6da;">int</span> <span style="color: #e7c547;">imm_4_0</span> = (inst &gt;&gt; 7)   &amp; 0x1f;
+
+    <span style="color: #b9ca4a;">return</span> imm_11_5 &lt;&lt; 5 | imm_4_0;
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4645ea2" class="outline-5">
+<h5 id="org4645ea2">Extension en 32 bits</h5>
+<div class="outline-text-5" id="text-org4645ea2">
+<p>
+Une fois que l’on a extrait la valeur immédiate sur <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="44"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></mjx-assistive-mml></mjx-container> bits (<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="45"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>=</mo><mn>12</mn></math></mjx-assistive-mml></mjx-container> dans le cas du type I), il
+faut construire une valeur 32 bits à partir de celle-ci. Ceci est nécessaire car le processeur
+RISC-V manipule uniquement des valeurs sur 32 bits.
+</p>
+
+<p>
+La section 1.1.3 de la spécification nous explique comment réaliser cette extension pour les
+différents types de codage. Nous allons détailler les opérations à réaliser pour le type I. À vous
+de trouver comment réaliser les autres types.
+</p>
+
+<p>
+La Figure <a href="#orgb924d9e">5</a> illustre comment l’extension de 12 à 32 bits est réalisée pour le type I.
+</p>
+
+
+<figure id="orgb924d9e">
+<img src="projet-riscv_fichiers/i-type-imm.svg" alt="i-type-imm.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;5&nbsp;: </span>Valeur immédiate calculée depuis un codage de type I</figcaption>
+</figure>
+
+
+<p>
+Si on note <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="46"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi><mn>32</mn></math></mjx-assistive-mml></mjx-container> la valeur immédiate étendue sur 32 bits et <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="47"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi></math></mjx-assistive-mml></mjx-container> la valeur immédiate sur 12 bits
+extraite du codage de type I, on déduit de la figure que
+</p>
+
+<ul class="org-ul">
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="48"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi><mn>32</mn><mo stretchy="false">[</mo><mn>10</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo><mo>=</mo><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>10</mn><mo>:</mo><mn>0</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container></li>
+<li><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="49"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c5B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c5D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi><mn>32</mn><mo stretchy="false">[</mo><mn>31</mn><mo>:</mo><mn>11</mn><mo stretchy="false">]</mo><mo>=</mo><mi>i</mi><mi>m</mi><mi>m</mi><mo stretchy="false">[</mo><mn>11</mn><mo stretchy="false">]</mo></math></mjx-assistive-mml></mjx-container> : cela signifie que le bit 11 de <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="50"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi></math></mjx-assistive-mml></mjx-container> est répété sur les bits 11 à 31 de
+<mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" style="font-size: 113.1%; position: relative;" tabindex="0" ctxtmenu_counter="51"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>i</mi><mi>m</mi><mi>m</mi><mn>32</mn></math></mjx-assistive-mml></mjx-container></li>
+</ul>
+
+<p>
+La raison qui motive ce codage <i>apparemment</i> complexe est simplement que la valeur immédiate étendue
+à 32 bits doit conserver le signe de la valeur immédiate sur 12 bits. Comme vous le savez<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup>, les
+nombres négatifs sont codés en <a href="https://fr.wikipedia.org/wiki/Compl%C3%A9ment_%C3%A0_deux">complément à deux</a>. Le bit de poids fort d’un nombre est alors appelé
+<i>bit de signe</i> et permet de savoir si un nombre est positif ou négatif.
+</p>
+
+<p>
+Dans la valeur immédiate sur 12 bits, le bit de signe est donc le bit 11. Si on <i>copie</i> ce bit du
+bit 12 au bit 31 pour construire un nombre 32 bits, on aura codé la même valeur, mais cette fois sur
+32 bits et non sur 12 bits.
+</p>
+
+<p>
+Par exemple l’entier -12 est codé (en complément à deux) :
+</p>
+
+<ul class="org-ul">
+<li><code>0xff4</code> sur 12 bits</li>
+<li><code>0xfffffff4</code> sur 32 bits</li>
+</ul>
+
+<p>
+On voit bien que pour passer de l’un à l’autre, on a simplement recopié le bit 11 sur tous les bits
+de 11 à 31. 
+</p>
+
+<p>
+Le programme <a href="#org6fa1706">8</a> donne un exemple permettant de réaliser cette extension.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;8&nbsp;: </span>Extension du bit de signe.</label><pre class="src src-C" id="org6fa1706"><code><span style="color: #7aa6da;">int32_t</span> <span style="color: #e78c45;">extension</span>(<span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">immediate</span>) {
+    <span style="color: #969896;">// </span><span style="color: #969896;">Test du bit de signe sur 12 bits
+</span>    <span style="color: #b9ca4a;">if</span> ((immediate &gt;&gt; 11) &amp; 1) {
+        <span style="color: #969896;">// </span><span style="color: #969896;">Extension à 32 bits en mettant à 1 les 20 bits de poids fort
+</span>        <span style="color: #b9ca4a;">return</span> immediate | 0xfffff000;
+    } 
+    <span style="color: #b9ca4a;">return</span> immediate;
+}
+</code></pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org435adac" class="outline-5">
+<h5 id="org435adac">Les types S<sub>B</sub> et U<sub>J</sub></h5>
+<div class="outline-text-5" id="text-org435adac">
+<p>
+Pour ces deux types, le décodage est globalement le même que pour les types S et U mais
+l’interprétation de la valeur immédiate est différente. Le détail est donné dans la section 1.1.3 de
+la spécification où ces deux types sont nommés B et J, respectivement. L’encodage précis de la
+valeur immédiate dans ces deux cas est donnée Figures <a href="#orge91629c">6</a> et <a href="#orgd4b1923">7</a>.
+</p>
+
+
+
+<figure id="orge91629c">
+<img src="projet-riscv_fichiers/b-type.svg" alt="b-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;6&nbsp;: </span>Valeur immédiate calculée depuis un codage de type S<sub>B</sub> (B).</figcaption>
+</figure>
+
+
+<figure id="orgd4b1923">
+<img src="projet-riscv_fichiers/j-type.svg" alt="j-type.svg" class="org-svg">
+
+<figcaption><span class="figure-number">Figure&nbsp;7&nbsp;: </span>Valeur immédiate calculée depuis un codage de type U<sub>J</sub> (J).</figcaption>
+</figure>
+
+
+<p>
+Par exemple, pour le type B, l’instruction contient les bits 1 à 12 de la valeur immédiate
+finale. Le bit 0 sera toujours à 0. Ceci est du au fait que les instructions utilisant cet encodage
+sont des instructions de branchement. La valeur immédiate est donc utilisée pour le calcul de
+l’adresse qui sera stockée dans le registre <code>pc</code> à la fin de l’exécution de l’instruction. Or, dans
+le jeu d’instruction RISCV, un processeur ne peut pas exécuter d’intruction située à une adresse
+impaire. Il est donc inutile de coder le bit 0 car on souhaite que la valeur immédiate soit toujours
+paire. On gagne alors 1 bit permettant de coder des valeurs plus grande et donc d’effectuer des
+branchements vers des instructions plus éloignées dans le code du programme.
+</p>
+
+<p>
+Le programme <a href="#org5c53687">9</a> donne un exemple de code C qui extrait correctement la valeur immédiate
+d’une instruction encodée selon le type S<sub>B</sub> (B)
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;9&nbsp;: </span>Extraction de la valeur immédiate depuis un encodage de type S<sub>B</sub> (B)</label><pre class="src src-C" id="org5c53687"><code><span style="color: #7aa6da;">int32_t</span> <span style="color: #e78c45;">imm_dans_b</span>(<span style="color: #7aa6da;">uint32_t</span> <span style="color: #e7c547;">icode</span>) {
+
+    <span style="color: #969896;">// </span><span style="color: #969896;">On extrait les différentes parties
+</span>    <span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">imm_11</span>  = (icode &gt;&gt; 7) &amp; 0x1;
+    <span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">imm_1_4</span> = (icode &gt;&gt; 8) &amp; 0xf;
+    <span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">imm_5_10</span> = (icode &gt;&gt; 25) &amp; 0x3f;
+    <span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">imm_12</span> = (icode &gt;&gt; 31) &amp; 0x1;
+
+    <span style="color: #969896;">// </span><span style="color: #969896;">On recolle les morceaux
+</span>    <span style="color: #7aa6da;">int32_t</span> <span style="color: #e7c547;">imm</span> = imm_1_4 &lt;&lt; 1 | imm_5_10 &lt;&lt; 5 | imm_11 &lt;&lt; 11 | imm_12 &lt;&lt; 12;
+
+    <span style="color: #969896;">// </span><span style="color: #969896;">On étend le bit de signe
+</span>    <span style="color: #b9ca4a;">return</span> extension_bit12(imm_12);
+}
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org35ae9d9" class="outline-3">
+<h3 id="org35ae9d9"><span class="section-number-3">2.3.</span> Livrable 1: un premier décodeur</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Vous pouvez maintenant écrire un premier programme qui doit:
+</p>
+
+<ol class="org-ol">
+<li>prendre en paramètre un chemin vers un fichier binaire</li>
+<li>pour chaque mot de 32 bits contenu dans le fichier, en extraire les 7 bits d’opcode et en déduire
+le type instruction correspondant parmi les opérations listées dans le tableau <a href="#org246e478">1</a> (BRANCH,
+OP-IMM…)</li>
+<li>de même, pour chaque mot de 32 bits, après avoir extrait l’opcode, déduire le type d’encodage
+utilisé par l’instruction (voir tableau <a href="#org246e478">1</a>)</li>
+</ol>
+
+<p>
+Votre programme être un programme s’exécutant dans un terminal et respectant le format de ligne de
+commande suivant:
+</p>
+
+
+<pre class="example" id="org4c96b4c">Un décodeur d'instruction RISC-V RV32I
+
+Utilisation: decode_riscv [OPTIONS] FICHIER_BIN
+
+Arguments:
+  FICHIER_BIN      Un fichier au format binaire contenant les instructions à décoder
+
+Options:
+  -h               Affiche ce message d'aide
+</pre>
+
+<p>
+La sortie du programme doit respecter <b>scrupuleusement</b><sup><a id="fnr.6" class="footref" href="#fn.6" role="doc-backlink">6</a></sup> le format CSV suivant:
+</p>
+
+<ul class="org-ul">
+<li>chaque mot de 32 bits déclenchera l’affichage d’une ligne sur la sortie standard ;</li>
+<li>cette ligne contiendra les valeurs suivantes, séparées par une <b>virgule</b>
+<ol class="org-ol">
+<li>offset: à combien d’octets se situe le mot de 32 bits depuis le début du fichier, en hexadecimal,</li>
+<li>valeur: la valeur du mot de 32 bits, affiché en hexadecimal,</li>
+<li>opcode: le type d’opcode (BRANCH, OP-IMM… <i>c.f.</i> tableau <a href="#org246e478">1</a>),</li>
+<li>encoding: le type d’encodage à utiliser (I, S<sub>B</sub>, R, S, U<sub>J</sub> ou U, <i>c.f.</i> tableau <a href="#org246e478">1</a>)</li>
+</ol></li>
+<li>la première ligne doit contenir le nom des champs</li>
+</ul>
+
+
+<p>
+Un exemple de sortie du programme est donné ci-dessous
+</p>
+
+<pre class="example" id="orge4a6e5c">offset,valeur,opcode,encoding
+00000000,d8f56403,LOAD,I
+00000004,580d7b63,BRANCH,S_B
+00000008,9a8dca13,OP-IMM,I
+0000000c,43b7a393,OP-IMM,I
+00000010,ce9ff513,OP-IMM,I
+00000014,0b1f9103,LOAD,I
+00000018,bacfb383,LOAD,I
+0000001c,759cde63,BRANCH,S_B
+00000020,89463eb3,OP,R
+00000024,1ff49b17,AUIPC,U
+00000028,f91e1d63,BRANCH,S_B
+0000002c,ec1b8ce3,BRANCH,S_B
+00000030,60e7a133,OP,R
+00000034,142c3fb7,LUI,U
+00000038,8d528893,OP-IMM,I
+0000003c,4b0dbb13,OP-IMM,I
+00000040,d453dd33,OP,R
+00000044,a0ee89a3,STORE,S
+00000048,9e574f33,OP,R
+0000004c,e2acf713,OP-IMM,I
+00000050,dc98d2f3,SYSTEM,I
+00000054,5c941c93,OP-IMM,I
+00000058,93cd59b3,OP,R
+0000005c,3139d323,STORE,S
+00000060,b45ed1b3,OP,R
+00000064,11ce5d93,OP-IMM,I
+00000068,0bbb2593,OP-IMM,I
+0000006c,a9488df3,SYSTEM,I
+00000070,3a578ab3,OP,R
+00000074,c5e7cee7,JALR,I
+00000078,4a155433,OP,R
+0000007c,fc377a63,BRANCH,S_B
+00000080,146d3f0f,MISC-MEM,I
+00000084,daf61a33,OP,R
+00000088,3b982eef,JAL,U_J
+0000008c,ddd1dfb3,OP,R
+00000090,19db3aa3,STORE,S
+00000094,614ff383,LOAD,I
+00000098,47294763,BRANCH,S_B
+0000009c,7412b283,LOAD,I
+</pre>
+</div>
+</div>
+<div id="outline-container-org6ef2a87" class="outline-3">
+<h3 id="org6ef2a87"><span class="section-number-3">2.4.</span> Livrable 2 : un désassembleur complet</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Fort de l’expérience du programme précédent, vous aller maintenant écrire un programme qui
+désassemble un fichier contenant des instructions au format binaire.
+</p>
+
+
+<p>
+La spécification de la ligne de commande de votre programme est la suivante:
+</p>
+
+<pre class="example" id="org61994ee">Un désassembleur RISC-V pour le jeu d'instruction RV32I
+
+Utilisation: disas [OPTIONS] FICHIER_BIN
+
+Arguments:
+  FICHIER_BIN          Un fichier contenant les instructions à désassembler
+
+Options:
+  -h                   Affiche ce message d'aide
+</pre>
+
+<p>
+la sortie devra être un affichage sur la sortie standard, contenant une instruction <b><b>complètement</b></b>
+décodée par ligne. Le format de la sortie devra être tel que:
+</p>
+
+<ul class="org-ul">
+<li>les registres seront écrits <code>x0</code>, <code>x1</code>, …, <code>x31</code> ;</li>
+<li>les valeurs immédiates seront affichées en décimal (<i>e.g.</i> 10, -12,…) ;</li>
+<li>les opérandes d’une instructions seront séparées par une virgule.</li>
+</ul>
+
+<p>
+Voici un exemple de fichier binaire représentant un programme (l’affichage correspond à la sortie de
+la commande <code>hexdump</code> sur le fichier binaire et affiche un mot de 32 bits par ligne, précédé de
+l’offset dans le fichier)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"><code>hexdump -e <span style="color: #70c0b1;">'"%08_ax: %08x\n"'</span> samples/sample.bin
+</code></pre>
+</div>
+
+<pre class="example">00000000: 06400093
+00000004: 0c800113
+00000008: 010005b7
+0000000c: 00400513
+00000010: 01f01013
+00000014: 00100073
+00000018: 40705013
+0000001c: 0000006f
+00000020: 00008067
+</pre>
+
+<p>
+Le résultat du désassemblage d’un tel fichier doit donner le programme <a href="#org0005f3d">10</a>. Sur cette
+sortie de programme, les valeurs immédiates sont affichées telles qu’elle seront utilisées par la
+processeur (c’est à dire avec extention du bit de signe et décalage éventuel, comme dans le cas de
+l’instruction lui par exemple). Pour rendre l’utilisation du désassembleur plus pratique, l’offset
+de chaque instruction est indiqué en début de chaque ligne et la valeur immédiate est également
+affichée en hexadécimal en commentaire.
+</p>
+
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Programme&nbsp;10&nbsp;: </span>Désassemblage d’un fichier contenant un programme RISC-V.</label><pre class="src src-asm" id="org0005f3d"><code><span style="color: #e78c45;">00000000</span>: <span style="color: #b9ca4a;">addi</span>         x1, x0, 100      <span style="color: #969896;">// </span><span style="color: #969896;">0x64
+</span><span style="color: #e78c45;">00000004</span>: <span style="color: #b9ca4a;">addi</span>         x2, x0, 200      <span style="color: #969896;">// </span><span style="color: #969896;">0xc8
+</span><span style="color: #e78c45;">00000008</span>: <span style="color: #b9ca4a;">lui</span>          x11, 16777216    <span style="color: #969896;">// </span><span style="color: #969896;">0x1000000
+</span><span style="color: #e78c45;">0000000c</span>: <span style="color: #b9ca4a;">addi</span>         x10, x0, 4       <span style="color: #969896;">// </span><span style="color: #969896;">0x4
+</span><span style="color: #e78c45;">00000010</span>: <span style="color: #b9ca4a;">slli</span>         x0, x0, 31       <span style="color: #969896;">// </span><span style="color: #969896;">0x1f
+</span><span style="color: #e78c45;">00000014</span>: <span style="color: #b9ca4a;">ebreak</span>
+<span style="color: #e78c45;">00000018</span>: <span style="color: #b9ca4a;">srai</span>         x0, x0, 1031     <span style="color: #969896;">// </span><span style="color: #969896;">0x407
+</span><span style="color: #e78c45;">0000001c</span>: <span style="color: #b9ca4a;">jal</span>          x0, 0            <span style="color: #969896;">// </span><span style="color: #969896;">0x0
+</span><span style="color: #e78c45;">00000020</span>: <span style="color: #b9ca4a;">jalr</span>         x0, x1, 0        <span style="color: #969896;">// </span><span style="color: #969896;">0x00</span>
+</code></pre>
+</div>
+
+<p>
+Pour réussir ce désassemblage, vous allez devoir interpréter correctement tous les types
+d’encodage. Afin de vous aider, le tableau <a href="#org68befc1">3</a> récapitule les instructions et les valeurs
+attendues pour les différents champs des différents encodage (ces valeurs peuvent se retrouver dans
+le chapitre 34 de la spécification RISC-V).
+</p>
+
+<p>
+La liste des instructions et leur spécification se trouvent essentiellement dans le chapitre 2 de la
+spécification.
+</p>
+
+
+<table id="org68befc1">
+<caption class="t-above"><span class="table-number">Tableau 3:</span> Tableau récapitulatif des formes d’encodage des instructions.</caption>
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-left">
+
+<col class="org-right">
+
+<col class="org-right">
+
+<col class="org-right">
+
+<col class="org-right">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Instruction</th>
+<th scope="col" class="org-left">Nom opcode</th>
+<th scope="col" class="org-right">Valeur Opcode</th>
+<th scope="col" class="org-right">Type encodage</th>
+<th scope="col" class="org-right">funct3</th>
+<th scope="col" class="org-right">funct7</th>
+<th scope="col" class="org-right">funct12</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">BEQ</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">BNE</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">001<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">BLT</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">100<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">BGE</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">BLTU</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">110<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">BGEU</td>
+<td class="org-left">BRANCH</td>
+<td class="org-right">1100011<sub>2</sub></td>
+<td class="org-right">S<sub>B</sub></td>
+<td class="org-right">111<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LB</td>
+<td class="org-left">LOAD</td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LH</td>
+<td class="org-left">LOAD</td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">001<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LW</td>
+<td class="org-left">LOAD</td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">010<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LBU</td>
+<td class="org-left">LOAD</td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">100<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LHU</td>
+<td class="org-left">LOAD</td>
+<td class="org-right">0000011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">FENCE</td>
+<td class="org-left">MISC-MEM</td>
+<td class="org-right">0001111<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">ADDI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLTI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">010<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLTIU</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">011<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">XORI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">100<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">ORI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">110<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">ANDI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">111<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLLI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">001<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SRLI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">0000000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SRAI</td>
+<td class="org-left">OP-IMM</td>
+<td class="org-right">0010011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">0100000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">JALR</td>
+<td class="org-left">JALR</td>
+<td class="org-right">1100111<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">-</td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">ECALL</td>
+<td class="org-left">SYSTEM</td>
+<td class="org-right">1110011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">000000000000<sub>2</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">EBREAK</td>
+<td class="org-left">SYSTEM</td>
+<td class="org-right">1110011<sub>2</sub></td>
+<td class="org-right">I</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">000000000001<sub>2</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">JAL</td>
+<td class="org-left">JAL</td>
+<td class="org-right">1101111<sub>2</sub></td>
+<td class="org-right">U<sub>J</sub></td>
+<td class="org-right">-</td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">ADD</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">0000000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SUB</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">0100000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLL</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">001<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLT</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">010<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SLTU</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">011<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">XOR</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">100<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SRL</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">0000000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SRA</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">101<sub>2</sub></td>
+<td class="org-right">0100000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">OR</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">110<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">AND</td>
+<td class="org-left">OP</td>
+<td class="org-right">0110011<sub>2</sub></td>
+<td class="org-right">R</td>
+<td class="org-right">111<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SB</td>
+<td class="org-left">STORE</td>
+<td class="org-right">0100011<sub>2</sub></td>
+<td class="org-right">S</td>
+<td class="org-right">000<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SH</td>
+<td class="org-left">STORE</td>
+<td class="org-right">0100011<sub>2</sub></td>
+<td class="org-right">S</td>
+<td class="org-right">001<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">SW</td>
+<td class="org-left">STORE</td>
+<td class="org-right">0100011<sub>2</sub></td>
+<td class="org-right">S</td>
+<td class="org-right">010<sub>2</sub></td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">AUIPC</td>
+<td class="org-left">AUIPC</td>
+<td class="org-right">0010111<sub>2</sub></td>
+<td class="org-right">U</td>
+<td class="org-right">-</td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+
+<tr>
+<td class="org-left">LUI</td>
+<td class="org-left">LUI</td>
+<td class="org-right">0110111<sub>2</sub></td>
+<td class="org-right">U</td>
+<td class="org-right">-</td>
+<td class="org-right">&nbsp;</td>
+<td class="org-right">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+<b><b>Attention</b></b> Gardez à l’esprit que le but de la SAÉ n’est pas d’écrire un
+désassembleur, mais un émulateur. Essayez de penser votre code de façon à
+pouvoir le réutiliser lorsque vous aller chercher à <b><b>exécuter</b></b> les
+instructions.
+</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+on peut également avoir accès à des périphériques via des adresses particulières sur Intel.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+prononcer <i>«&nbsp;risk-five&nbsp;»</i>.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+au moins dans un premier temps, on pourra imaginer des extensions par la suite si le temps le permet.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+qui ne concerne pas ce projet, comme les instructions à taille variable par exemple.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+en tout cas, vous devriez le savoir. 
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.6" class="footnum" href="#fnr.6" role="doc-backlink">6</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+le livrable sera testé à l’aide de scripts automatiques.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Auteur: Michaël Hauspie</p>
+<p class="date">Created: 2026-09-14 Lun 11:55</p>
+</div>
+
+
+</body></html>
