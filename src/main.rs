@@ -1,15 +1,25 @@
-use std::{env, fs::File, io::{self, Read}};
+use std::{fs::File, io::{self, Read}};
+use clap::Parser;
 
+/// Un décodeur d'instruction RISC-V RV32I
+#[derive(Parser, Debug)]
+#[command(
+    name = "decode_riscv", 
+    override_usage = "decode_riscv [OPTIONS] FICHIER_BIN",
+)]
+
+struct Args {
+    /// Un fichier au format binaire contenant les instructions à décoder
+    #[arg(name = "FICHIER_BIN")]
+    fichier_bin: String,
+}
 fn main() -> io::Result<()> {
-    let args: Vec<String> = env::args().collect();
+    let args = Args::parse();
 
-    if args.len() < 2 {
-        eprintln!("Pas assez d'argument");
+    let mut fichier = File::open(&args.fichier_bin).unwrap_or_else(|err| {
+        eprintln!("Erreur lors de l'ouverture du fichier {} : {}", args.fichier_bin, err);
         std::process::exit(1);
-    }
-
-    let chemin_fichier = &args[1];
-    let mut fichier = File::open(chemin_fichier)?;
+    });
 
     let mut buffer = [0u8; 4];
     let mut offset = 0;
